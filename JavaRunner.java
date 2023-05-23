@@ -7,5 +7,7 @@ public class JavaRunner {
         multiplication.MultiplicationTable(12, 11, 20);
         Book book = new Book();
         book.readBook();
+        book.bookCopies(10);
+        System.out.println(book.getBookcopies());
     }
 }
