@@ -14,6 +14,7 @@ public class InputRunner {
         System.out.println("2-Subtract");
         System.out.println("3-Divide");
         System.out.println("4-Multiply");
+        System.out.println("5-Exit");
 
         System.out.println("Enter operation: ");
         int choice = scanner.nextInt();
@@ -23,23 +24,28 @@ public class InputRunner {
         System.out.println("Number 2:" + number2);
         System.out.println("Operation :" + choice);
 
-        switch (choice) {
-            case 1:
-                System.out.println("Add of number 1 and number 2 :" + (number1 + number2));
-                break;
-            case 2:
-                System.out.println("Subtract of number 1 and number 2 :" + (number1 - number2));
-                break;
-            case 3:
-                System.out.println("Divide of number 1 and number 2 :" + (number1 / number2));
-                break;
-            case 4:
-                System.out.println("Multiply of number 1 and number 2 :" + (number1 * number2));
-                break;
-            default:
-                System.out.println("You have not entered correct value");
-                break;
-        }
+        do {
+            switch (choice) {
+                case 1:
+                    System.out.println("Add of number 1 and number 2 :" + (number1 + number2));
+                    break;
+                case 2:
+                    System.out.println("Subtract of number 1 and number 2 :" + (number1 - number2));
+                    break;
+                case 3:
+                    System.out.println("Divide of number 1 and number 2 :" + (number1 / number2));
+                    break;
+                case 4:
+                    System.out.println("Multiply of number 1 and number 2 :" + (number1 * number2));
+                    break;
+                case 5:
+                    System.out.println("!!!Exit!!!");
+                    break;
+                default:
+                    System.out.println("You have not entered correct value");
+                    break;
+            }
+        } while (choice != 5);
 
     }
 }
