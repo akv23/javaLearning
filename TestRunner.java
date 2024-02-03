@@ -1,19 +1,21 @@
 public class TestRunner {
     public static void main(String[] args) {
-        String str = "";
-        System.out.println(findLongestWord(str));
+        System.out.println(isLeapYear(2004));
     }
 
-    private static String findLongestWord(String str) {
-        String[] word = str.split(" ");
-        int maxLength = 0;
-        String longestWord = "";
-        for (int i = 0; i < word.length; i++) {
-            if (word[i].length() > maxLength) {
-                maxLength = word[i].length();
-                longestWord = word[i];
-            }
+    public static boolean isLeapYear(int year) {
+        boolean flag = false;
+        if (year <= 0)
+            flag = false;
+        if (year / 4 == 0)
+            flag = true;
+        if (year / 4 == 0 && year / 100 != 0) {
+            flag = true;
         }
-        return longestWord;
+        if (year / 4 == 0 && year / 400 == 0) {
+            flag = true;
+        }
+        return flag;
     }
+
 }
