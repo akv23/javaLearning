@@ -3,7 +3,7 @@ import java.util.List;
 
 public class TestRunner {
     public static void main(String[] args) {
-        System.out.println(isLeapYear(2004));
+System.out.println(isLeapYear(2004));
         // String str = "";
         // System.out.println(findLongestWord(str));
         // System.out.println(isPerfectNumber(0));
@@ -21,13 +21,13 @@ public class TestRunner {
     public static List<Integer> determineMultiples(int number, int limit) {
         List<Integer> list = new ArrayList<Integer>();
         boolean flag = true;
-        int i = 1;
+        int i=1;
         if (number > limit) {
             return list;
         } else {
             while (flag) {
-                if (i * number < limit)
-                    list.add(i * number);
+                if(i*number < limit)
+                    list.add(i*number);
                 else
                     flag = false;
                 i++;

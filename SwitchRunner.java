@@ -16,6 +16,7 @@ public class SwitchRunner {
         System.out.println("Enter the number of a month : ");
         int monthNumber = scanner.nextInt();
         System.out.println(determineNameOfmonth(monthNumber));
+        scanner.close();
 
     }
 
@@ -92,4 +93,5 @@ public class SwitchRunner {
         }
         return false;
     }
+    
 }

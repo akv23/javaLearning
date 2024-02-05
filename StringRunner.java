@@ -24,10 +24,12 @@ public class StringRunner {
         return longestString;
     }
 
+    @SuppressWarnings("unused")
     private static void printString(String someString) {
         for (int i = 0; i < someString.length(); i++) {
             System.out.println(someString.charAt(i));
         }
     }
+    
 
 }
