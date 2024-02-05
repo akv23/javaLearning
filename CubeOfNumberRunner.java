@@ -16,6 +16,7 @@ public class CubeOfNumberRunner {
             number = scanner.nextInt();
         } while (number >= 0);
         System.out.println("Thank You! Have Fun");
+        scanner.close();
 
     }
 }

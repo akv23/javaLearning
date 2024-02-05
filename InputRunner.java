@@ -46,6 +46,6 @@ public class InputRunner {
                     break;
             }
         } while (choice != 5);
-
+        scanner.close();
     }
 }
