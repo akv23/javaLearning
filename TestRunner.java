@@ -1,9 +1,10 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 public class TestRunner {
     public static void main(String[] args) {
-System.out.println(isLeapYear(2004));
+        // System.out.println(isLeapYear(2004));
         // String str = "";
         // System.out.println(findLongestWord(str));
         // System.out.println(isPerfectNumber(0));
@@ -12,10 +13,13 @@ System.out.println(isLeapYear(2004));
         // System.out.println(findSecondLargestElement(array));
         // int[] newArray = reverseArray(array);
         // List<Integer> newArray = determineAllFactors(12);
-        List<Integer> newArray = determineMultiples(0, 7);
-        for (int i : newArray) {
-            System.out.println(i);
-        }
+        // List<Integer> newArray = determineMultiples(0, 7);
+        // for (int i : newArray) {
+        //     System.out.println(i);
+        // }
+        List<String> words = List.of("Apple","Bat","Cat","Dog","eat");
+        ArrayList<String> wordAL = new ArrayList<>(words);
+        wordArrayList(wordAL);
     }
 
     public static List<Integer> determineMultiples(int number, int limit) {
@@ -128,4 +132,13 @@ System.out.println(isLeapYear(2004));
             return false;
     }
 
+    public static void wordArrayList(ArrayList<String> wordAL){
+        Iterator<String> itr = wordAL.iterator();
+        while(itr.hasNext()){
+            // String str = itr.next();
+            if(itr.next().endsWith("at"))
+                itr.remove();
+        }
+        System.out.println(wordAL);
+    }
 }
