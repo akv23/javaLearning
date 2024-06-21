@@ -28,6 +28,7 @@ public class FunctionalProgramRunner {
     private static void printWithFPWithFiltering(List<String> list) {
         list.stream()
         .filter(element -> element.endsWith("at"))
+        .map(e-> e.length())
         .forEach(element -> System.out.println(element));
         
     }
